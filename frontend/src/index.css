@@ -1,0 +1,20 @@
+main {
+  min-height: 80vh;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+a {
+  color: #e7e7e7;
+}
+
+a:hover {
+  color: #a8a8a8;
+  text-decoration: none;
+}
