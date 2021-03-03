@@ -2442,38 +2442,40 @@ fieldset:disabled a.btn {
 }
 .btn-primary {
   color: #fff;
-  background-color: #2a9fd6;
-  border-color: #2a9fd6;
+  background-color: #00ff9a;
+  border-color: #00bb70;
+  font-weight: bold;
+  font-size: 16px;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #2387b7;
-  border-color: #2180ac;
+  background-color: #00be72;
+  border-color: #00bb70;
 }
 .btn-primary.focus,
 .btn-primary:focus {
   color: #fff;
-  background-color: #2387b7;
-  border-color: #2180ac;
-  box-shadow: 0 0 0 0.2rem rgba(74, 173, 220, 0.5);
+  background-color: #38ffaf;
+  border-color: #00bb70;
+  box-shadow: 0 0 0 0.2rem #00bb70;
 }
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #2a9fd6;
-  border-color: #2a9fd6;
+  background-color: #445850;
+  border-color: #445850;
 }
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #2180ac;
-  border-color: #1f78a1;
+  background-color: #00ff9a;
+  border-color: #00e78b;
 }
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(74, 173, 220, 0.5);
+  box-shadow: 0 0 0 0.2rem #00ff9a;
 }
 .btn-secondary {
   color: #fff;
@@ -5171,17 +5173,17 @@ a.badge-dark:focus {
   z-index: 1;
   color: #282828;
   text-decoration: none;
-  background-color: #2a9fd6;
+  background-color: #282828;
 }
 .list-group-item-action:active {
   color: #adafae;
-  background-color: #2a9fd6;
+  background-color: #282828;
 }
 .list-group-item {
   position: relative;
   display: block;
   padding: 0.75rem 1.25rem;
-  background-color: #222;
+  /*   background-color: #222; */
   border: 1px solid #282828;
 }
 .list-group-item:first-child {
@@ -6265,7 +6267,7 @@ a.bg-primary:focus,
 a.bg-primary:hover,
 button.bg-primary:focus,
 button.bg-primary:hover {
-  background-color: #2180ac !important;
+  background-color: #00ff9a !important;
 }
 .bg-secondary {
   background-color: #555 !important;
@@ -9550,7 +9552,7 @@ a.text-dark:hover {
   border-width: 1px 0 0;
 }
 .btn-primary {
-  background-color: #2a9fd6;
+  background-color: #00e68a;
 }
 .btn-secondary {
   background-color: #555;
