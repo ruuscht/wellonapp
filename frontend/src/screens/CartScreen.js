@@ -40,10 +40,10 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Shopping Cart</h1>
+        <h1>Kundvagn</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty <Link to="/">Go Back</Link>
+            Din kundvagn är tom <Link to="/">Gå tillbaka</Link>
           </Message>
         ) : (
           <ListGroup variant="flush">
@@ -94,13 +94,13 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+                Delsumma ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                Produkter
               </h2>
-              $
               {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
-                .toFixed(2)}
+                .toFixed(2)}{" "}
+              Kr
             </ListGroup.Item>
             <ListGroup.Item>
               <Button
@@ -109,7 +109,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed To Checkout
+                Fortsätt till Checkout
               </Button>
             </ListGroup.Item>
           </ListGroup>

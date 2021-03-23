@@ -29,7 +29,7 @@ const RegisterScreen = ({ location, history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setMessage("Password do not match");
+      setMessage("Dina lösenord matchar inte");
     } else {
       dispatch(register(name, email, password));
     }
@@ -37,61 +37,61 @@ const RegisterScreen = ({ location, history }) => {
 
   return (
     <FormContainer>
-      <h1>Sign Up</h1>
+      <h1>Registrera</h1>
       {message && <Message variant="danger">{message}</Message>}
       {error && <Message variant="danger">{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="name">
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Namn</Form.Label>
           <Form.Control
             type="name"
-            placeholder="Enter name"
+            placeholder="Skriv ditt namn"
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Enter email"
+            placeholder="Skriv din email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Lösenord</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Enter password"
+            placeholder="Skriv ditt password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group controlId="confirmPassword">
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label>Beskräfta Lösenord</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Confirm password"
+            placeholder="Beskräfta Lösenord"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Button type="submit" varitant="primary">
-          Register
+          Skapa konto
         </Button>
       </Form>
 
       <Row className="py-3">
         <Col>
-          Have an account?{" "}
+          Hr du redan ett konto?{" "}
           <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
-            Login
+            Logga In
           </Link>
         </Col>
       </Row>

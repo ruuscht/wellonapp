@@ -56,10 +56,10 @@ const ProfileScreen = ({ location, history }) => {
   return (
     <Row>
       <Col md={3}>
-        <h2>User Profile</h2>
+        <h2>Profil</h2>
         {message && <Message variant="danger">{message}</Message>}
         {}
-        {success && <Message variant="success">Profile Updated</Message>}
+        {success && <Message variant="success">Profil Uppdaterad</Message>}
         {loading ? (
           <Loader />
         ) : error ? (
@@ -67,53 +67,53 @@ const ProfileScreen = ({ location, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Namn</Form.Label>
               <Form.Control
                 type="name"
-                placeholder="Enter name"
+                placeholder="Skriv ditt namn"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Form.Group controlId="email">
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter email"
+                placeholder="skriv din email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Form.Group controlId="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Lösenord</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Enter password"
+                placeholder="Skriv ditt lösenord"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Form.Group controlId="confirmPassword">
-              <Form.Label>Confirm Password</Form.Label>
+              <Form.Label>Bekräfta Lösenord</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Confirm password"
+                placeholder="Bekräfta Lösenord"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Button type="submit" variant="primary">
-              Update
+              Uppdatera
             </Button>
           </Form>
         )}
       </Col>
       <Col md={9}>
-        <h2>My Orders</h2>
+        <h2>Min Beställningar</h2>
         {loadingOrders ? (
           <Loader />
         ) : errorOrders ? (
@@ -122,11 +122,11 @@ const ProfileScreen = ({ location, history }) => {
           <Table hover responsive className="table">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>DATE</th>
-                <th>TOTAL</th>
-                <th>PAID</th>
-                <th>DELIVERED</th>
+                <th>OrderID</th>
+                <th>Datum</th>
+                <th>Totalt</th>
+                <th>Betalat</th>
+                <th>Levererad</th>
                 <th></th>
               </tr>
             </thead>
@@ -153,7 +153,7 @@ const ProfileScreen = ({ location, history }) => {
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
                       <Button className="btn-sm" variant="light">
-                        Details
+                        Detaljer
                       </Button>
                     </LinkContainer>
                   </td>

@@ -25,7 +25,7 @@ const OrderListScreen = ({ history }) => {
 
   return (
     <>
-      <h1>Orders</h1>
+      <h1>Beställningar</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -34,12 +34,12 @@ const OrderListScreen = ({ history }) => {
         <Table striped bordered hover responsive className="table-sm">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>USER</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
+              <th>OrderID</th>
+              <th>Användare</th>
+              <th>Datum</th>
+              <th>Totalt</th>
+              <th>Betald</th>
+              <th>Levererad</th>
               <th></th>
             </tr>
           </thead>
@@ -67,7 +67,7 @@ const OrderListScreen = ({ history }) => {
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button variant="light" className="btn-sm">
-                      Details
+                      Detaljer
                     </Button>
                   </LinkContainer>
                 </td>

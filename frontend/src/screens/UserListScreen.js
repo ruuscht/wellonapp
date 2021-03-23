@@ -34,7 +34,7 @@ const UserListScreen = ({ history }) => {
 
   return (
     <>
-      <h1>Users</h1>
+      <h1>Användre</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -43,10 +43,10 @@ const UserListScreen = ({ history }) => {
         <Table bordered hover responsive className="table">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>EMAIL</th>
-              <th>ADMIN</th>
+              <th>OrderID</th>
+              <th>Namn</th>
+              <th>Emil</th>
+              <th>Admin</th>
               <th></th>
             </tr>
           </thead>
